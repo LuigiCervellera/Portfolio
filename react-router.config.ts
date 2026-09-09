@@ -1,7 +1,7 @@
 import type { Config } from "@react-router/dev/config";
 
 export default {
-  // Config options...
-  // Server-side render by default, to enable SPA mode set this to `false`
-  ssr: true,
+  // Static Single Page App (SPA) mode for instant static CDN deployment on Vercel
+  ssr: false,
 } satisfies Config;
+
