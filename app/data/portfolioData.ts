@@ -42,7 +42,7 @@ export interface PortfolioData {
 
 export const portfolioData: PortfolioData = {
   personal: {
-    name: "Luigi",
+    name: "Luigi Cervellera",
     role: "Junior Frontend Developer & Motion Designer",
     headline: "Unisco lo sviluppo web moderno con la creatività di motion graphics, VFX designer e video editing.",
     bio: [

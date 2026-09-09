@@ -1,5 +1,5 @@
 import React from "react";
-import { User, MapPin, Mail, Sparkles, CheckCircle2 } from "lucide-react";
+import { User, MapPin, Mail, Sparkles, CheckCircle2, Code2 } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
 import { BorderBeam } from "./ui/border-beam";
 
@@ -19,22 +19,18 @@ export function About() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Visual Avatar / Card */}
+          {/* Visual Profile Card (No photo) */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative group w-full max-w-sm">
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur-md opacity-30 group-hover:opacity-60 transition duration-500" />
-              <div className="relative rounded-2xl bg-slate-900 border border-slate-800 p-6 flex flex-col items-center text-center">
-                <div className="w-32 h-32 rounded-2xl overflow-hidden mb-6 border-2 border-slate-700 shadow-xl">
-                  <img
-                    src={personal.avatarUrl}
-                    alt={personal.name}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300"
-                  />
+              <div className="relative rounded-2xl bg-slate-900 border border-slate-800 p-8 flex flex-col items-center text-center">
+                <div className="p-4 rounded-2xl bg-gradient-to-tr from-cyan-500/20 via-blue-500/20 to-indigo-500/20 border border-cyan-500/30 text-cyan-400 mb-5 shadow-lg shadow-cyan-500/10 group-hover:scale-105 transition duration-300">
+                  <Code2 className="w-10 h-10" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-1">{personal.name}</h3>
-                <p className="text-sm text-cyan-400 font-medium mb-4">{personal.role}</p>
+                <h3 className="text-2xl font-bold text-white mb-1">{personal.name}</h3>
+                <p className="text-sm text-cyan-400 font-semibold mb-6">{personal.role}</p>
 
-                <div className="w-full pt-4 border-t border-slate-800 flex flex-col gap-2.5 text-sm text-slate-300">
+                <div className="w-full pt-5 border-t border-slate-800 flex flex-col gap-3 text-sm text-slate-300">
                   <div className="flex items-center justify-center gap-2">
                     <MapPin className="w-4 h-4 text-cyan-400" />
                     <span>{personal.location}</span>
