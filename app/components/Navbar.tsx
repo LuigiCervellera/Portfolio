@@ -52,6 +52,11 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToTop = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       {/* CORNER SNAKE BEAM (Visible during scroll transition in the top-left corner) */}
@@ -122,11 +127,12 @@ export function Navbar() {
               >
                 {/* Brand / Snake Head */}
                 <motion.a
-                  href="#"
+                  href="#hero"
+                  onClick={scrollToTop}
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0, transition: { duration: 0.35, delay: 0.08 } }}
                   exit={{ opacity: 0, x: -70, transition: { duration: 0.22, delay: 0 } }}
-                  className="flex items-center gap-2.5 font-bold text-base sm:text-lg text-white group tracking-tight pl-2 shrink-0"
+                  className="flex items-center gap-2.5 font-bold text-base sm:text-lg text-white group tracking-tight pl-2 shrink-0 cursor-pointer"
                 >
                   <span className="p-2 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform flex items-center justify-center">
                     <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -267,7 +273,8 @@ export function Navbar() {
             >
               {/* Brand Home Node (Snake Head on the Left Track) */}
               <motion.a
-                href="#"
+                href="#hero"
+                onClick={scrollToTop}
                 initial={{ opacity: 0, y: -30, scale: 0.6 }}
                 animate={{
                   opacity: 1,
@@ -281,7 +288,7 @@ export function Navbar() {
                   scale: 0.6,
                   transition: { duration: 0.2, delay: 0 },
                 }}
-                className="p-2.5 rounded-2xl bg-slate-900/90 border border-slate-800 text-cyan-400 hover:text-white hover:border-cyan-500/50 transition-all hover:scale-110 shadow-sm"
+                className="p-2.5 rounded-2xl bg-slate-900/90 border border-slate-800 text-cyan-400 hover:text-white hover:border-cyan-500/50 transition-all hover:scale-110 shadow-sm cursor-pointer"
                 title="Torna all'inizio"
               >
                 <Code2 className="w-4 h-4" />
@@ -398,7 +405,11 @@ export function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             className="fixed top-3 left-4 right-4 z-50 md:hidden flex items-center justify-between p-2 rounded-full bg-slate-950/90 backdrop-blur-xl border border-slate-800 shadow-xl"
           >
-            <a href="#" className="flex items-center gap-1.5 text-xs font-bold text-white pl-2">
+            <a
+              href="#hero"
+              onClick={scrollToTop}
+              className="flex items-center gap-1.5 text-xs font-bold text-white pl-2 cursor-pointer"
+            >
               <span className="p-1 rounded-lg bg-cyan-500 text-slate-950">
                 <Code2 className="w-3.5 h-3.5" />
               </span>

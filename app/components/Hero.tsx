@@ -63,7 +63,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
+    <section id="hero" className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
       {/* Subtle background glow effect */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-gradient-to-tr from-cyan-500/15 via-blue-500/10 to-indigo-500/20 blur-[120px] rounded-full pointer-events-none -z-10" />
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-blue-600/10 blur-[100px] rounded-full pointer-events-none -z-10" />
