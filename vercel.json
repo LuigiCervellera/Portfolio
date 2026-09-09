@@ -1,5 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "react-router build",
+  "outputDirectory": "build/client",
   "cleanUrls": true,
   "rewrites": [
     {
